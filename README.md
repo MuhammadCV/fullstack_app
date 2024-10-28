@@ -39,7 +39,7 @@ This project is a task list application built with Django for the backend and Re
    Open your terminal and run:
    ```bash
    git clone https://github.com/MuhammadCV/fullstack_app.git
-   cd task-list-app
+   cd fullstack_app
 
 ### Backend (Django)
 

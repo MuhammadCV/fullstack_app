@@ -47,7 +47,7 @@ This project is a task list application built with Django for the backend and Re
 
    ```bash
    conda create --name task python=3.9
-   conda activate task`
+   conda activate task
 
 2. **Install Required Libraries**: Install the necessary Python packages:
 
@@ -56,8 +56,8 @@ This project is a task list application built with Django for the backend and Re
    pip install djangorestframework
    pip install django-cors-headers
    pip install psycopg2-binary
-   pip install celery`
-
+   pip install celery
+   
 ### Frontend (React)
 
 1. **Install Node.js**: Download and install Node.js from [nodejs.org](https://nodejs.org/). This will also install npm (Node Package Manager).
@@ -66,13 +66,13 @@ This project is a task list application built with Django for the backend and Re
 
    ```bash
    npx create-react-app task-list-app
-   cd task-list-app`
-
+   cd task-list-app
+   
 3. **Install Axios**: To handle HTTP requests, install Axios:
 
    ```bash
-    npm install axios`
-
+    npm install axios
+   
 Setting Up the Project
 ----------------------
 
@@ -81,24 +81,24 @@ Setting Up the Project
 1. **Navigate to Your Django Project Directory**: If you have created a Django project named `myproject`, navigate to that directory:
 
    ```bash
-    cd myproject  # or wherever your Django project is located`
-
+    cd myproject  
 3.  **Configure Django Settings**:
 
    -   Update `settings.py` to include `corsheaders` in `INSTALLED_APPS` and middleware settings.
    -   Set up the database settings for PostgreSQL.
+     
 4. **Run Migrations**: Apply migrations to set up your database schema:
 
    ```bash
-   python manage.py migrate`
+   python manage.py migrate
 
 ### Setting Up the Frontend
 
 1. **Navigate to the React App Directory**: If your React app is in the `task-list-app` folder, change to that directory:
 
    ```bash
-   cd task-list-app`
-
+   cd task-list-app
+   
 Running the Application
 -----------------------
 
@@ -107,24 +107,24 @@ Running the Application
 1. **Start the Django Development Server**: In your Django project directory, run:
 
    ```bash
-   python manage.py runserver`
-
+   python manage.py runserver
+   
 ### Start the Celery Worker
 
 1. **In a New Terminal Window**: Activate your conda environment again and start the Celery worker:
 
    ```bash
    conda activate task
-   celery -A tasks.tasks worker --loglevel=info`
-
+   celery -A tasks.tasks worker --loglevel=info
+   
 ### Start the React Frontend
 
 1. **In Another Terminal Window**: Navigate to your React app directory and start the development server:
 
    ```bash
    cd task-list-app
-   npm start`
-
+   npm start
+   
 API Endpoints
 -------------
 

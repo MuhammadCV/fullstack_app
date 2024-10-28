@@ -38,7 +38,7 @@ This project is a task list application built with Django for the backend and Re
 1. **Clone the GitHub Repository**:
    Open your terminal and run:
    ```bash
-   git clone https://github.com/your_username/task-list-app.git
+   git clone https://github.com/MuhammadCV/fullstack_app.git
    cd task-list-app
 
 ### Backend (Django)

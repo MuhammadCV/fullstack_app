@@ -62,16 +62,11 @@ This project is a task list application built with Django for the backend and Re
 
 1. **Install Node.js**: Download and install Node.js from [nodejs.org](https://nodejs.org/). This will also install npm (Node Package Manager).
 
-2. **Create a React Application**: Use Create React App to set up a new project:
+2. **Install Axios**: Go to React Application and to handle HTTP requests, install Axios:
 
    ```bash
-   npx create-react-app task-list-app
    cd task-list-app
-   
-3. **Install Axios**: To handle HTTP requests, install Axios:
-
-   ```bash
-    npm install axios
+   npm install axios
    
 Setting Up the Project
 ----------------------

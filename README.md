@@ -76,24 +76,14 @@ Setting Up the Project
 1. **Navigate to Your Django Project Directory**: If you have created a Django project named `myproject`, navigate to that directory:
 
    ```bash
-    cd myproject  
-3.  **Configure Django Settings**:
-
-   -   Update `settings.py` to include `corsheaders` in `INSTALLED_APPS` and middleware settings.
-   -   Set up the database settings for PostgreSQL.
-     
-4. **Run Migrations**: Apply migrations to set up your database schema:
+    cd myproject
+    
+3.  **Run Migrations**: Apply migrations to set up your database schema:
 
    ```bash
    python manage.py migrate
 
-### Setting Up the Frontend
 
-1. **Navigate to the React App Directory**: If your React app is in the `task-list-app` folder, change to that directory:
-
-   ```bash
-   cd task-list-app
-   
 Running the Application
 -----------------------
 

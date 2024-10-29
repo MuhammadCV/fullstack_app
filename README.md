@@ -76,33 +76,37 @@ Setting up and Running the Project
 ![plot](./2.png)
 ![plot](./3.png)
    
-HERE!!! START FROM HERE!!!
 ### Setting Up the Docker
 
-1. **Navigate to Your Django Project Directory**: If you have created a Django project named `myproject`, navigate to that directory:
-
-   ```bash
-    cd myproject
+1. **Install Docker**: For MacOS/Windows: Download Docker Desktop from Docker's official website and follow the installation instructions.
     
-3. **Run Migrations**: Apply migrations to set up your database schema:
+2. **Build and Run the Docker Compose Setup on new terminal**: Build the Docker Images: Run the following command from the root directory of your project:
 
    ```bash
-   python manage.py migrate
+   conda activate task
+   cd fullstack_app
+   docker-compose build
+
+3. **Run the Docker Containers**: In the same directory start the containers with:
+
+   ```bash
+   docker-compose up
+
+![plot](./4.png)
+   
+4. **Access Your Application**: Once everything is up, you should be able to access your Django application at http://localhost:8000.
+
+![plot](./5.png)
 
 
 ### Frontend (React)
 
 1. **Install Node.js**: Download and install Node.js from [nodejs.org](https://nodejs.org/). This will also install npm (Node Package Manager).
 
-2. **Install Axios**: Go to React Application and to handle HTTP requests, install Axios:
-
-   ```bash
-   cd task-list-app
-   npm install axios
-
 3. **In Another Terminal Window**: Navigate to your React app directory and start the development server:
 
    ```bash
+   conda activate task
    cd task-list-app
    npm start
    

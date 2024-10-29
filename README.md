@@ -78,7 +78,7 @@ Setting Up the Project
    ```bash
     cd myproject
     
-3.  **Run Migrations**: Apply migrations to set up your database schema:
+3. **Run Migrations**: Apply migrations to set up your database schema:
 
    ```bash
    python manage.py migrate

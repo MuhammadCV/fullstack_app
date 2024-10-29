@@ -122,7 +122,12 @@ Setting up and Running the Project
 
 3. Click Send. You should receive a response with a list of tasks in JSON format.
 
-4. **Test Other Endpoints**: You can test other endpoints (like creating, updating, or deleting tasks), as well (using POST, PUT, DELETE methods as appropriate).
+![plot](./8.png)
+
+5. **Test Other Endpoints**: You can test other endpoints (like creating, updating, or deleting tasks), as well (using POST, PUT, DELETE methods as appropriate).
+
+![plot](./9.png)
+![plot](./10.png)
 
 
 API Endpoints

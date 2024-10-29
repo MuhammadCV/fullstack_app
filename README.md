@@ -72,9 +72,9 @@ Setting up and Running the Project
 
 5. **Email notification Testing**: If you go to http://127.0.0.1:8000/api/tasks/ and post new task, it will print it on Celery Worker terminal and send an emial form unistar20172010@gmail.com to boboevm832000@gmail.com.
 
-![plot](./pictures/1.png)
-![plot](./pictures/2.png)
-![plot](./pictures/3.png)
+![plot](./1.png)
+![plot](./2.png)
+![plot](./3.png)
    
 HERE!!! START FROM HERE!!!
 ### Setting Up the Docker

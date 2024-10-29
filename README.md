@@ -31,7 +31,8 @@ This project is a task list application built with Django for the backend and Re
 - **React**: JavaScript library for building user interfaces.
 - **Axios**: Promise-based HTTP client for making API requests.
 
-## Installation
+Setting up and Running the Project
+----------------------------------
 
 ### Clone the Repository
 
@@ -41,37 +42,42 @@ This project is a task list application built with Django for the backend and Re
    git clone https://github.com/MuhammadCV/fullstack_app.git
    cd fullstack_app
 
-### Backend (Django)
+### Backend (Django) and Celery
 
 1. **Create and Activate Conda Environment**: Open your terminal and run:
 
    ```bash
-   conda create --name task python=3.9
+   conda env create -f environment.yml
    conda activate task
 
-2. **Install Required Libraries**: Install the necessary Python packages:
+2. **Start the Django Development Server**: This will start the server on the default address http://127.0.0.1:8000.
+   
+   ```bash
+   cd myproject/
+   python manage.py runserver
+
+3. **In a New Terminal Window**: Activate your conda environment again and start the Redis Server:
 
    ```bash
-   pip install Django
-   pip install djangorestframework
-   pip install django-cors-headers
-   pip install psycopg2-binary
-   pip install celery
-   
-### Frontend (React)
+   conda activate task
+   redis-server
 
-1. **Install Node.js**: Download and install Node.js from [nodejs.org](https://nodejs.org/). This will also install npm (Node Package Manager).
 
-2. **Install Axios**: Go to React Application and to handle HTTP requests, install Axios:
+4. **In another New Terminal Window**: Activate your conda environment again and start the Celery Worker:
 
    ```bash
-   cd task-list-app
-   npm install axios
-   
-Setting Up the Project
-----------------------
+   conda activate task
+   cd myproject
+   celery -A myproject worker --loglevel=info
 
-### Setting Up the Backend
+5. **Email notification Testing**: If you go to http://127.0.0.1:8000/api/tasks/ and post new task, it will print it on Celery Worker terminal and send an emial form unistar20172010@gmail.com to boboevm832000@gmail.com.
+
+![plot](./pictures/1.png)
+![plot](./pictures/2.png)
+![plot](./pictures/3.png)
+   
+HERE!!! START FROM HERE!!!
+### Setting Up the Docker
 
 1. **Navigate to Your Django Project Directory**: If you have created a Django project named `myproject`, navigate to that directory:
 
@@ -84,27 +90,17 @@ Setting Up the Project
    python manage.py migrate
 
 
-Running the Application
------------------------
+### Frontend (React)
 
-### Start the Django Backend
+1. **Install Node.js**: Download and install Node.js from [nodejs.org](https://nodejs.org/). This will also install npm (Node Package Manager).
 
-1. **Start the Django Development Server**: In your Django project directory, run:
-
-   ```bash
-   python manage.py runserver
-   
-### Start the Celery Worker
-
-1. **In a New Terminal Window**: Activate your conda environment again and start the Celery worker:
+2. **Install Axios**: Go to React Application and to handle HTTP requests, install Axios:
 
    ```bash
-   conda activate task
-   celery -A tasks.tasks worker --loglevel=info
-   
-### Start the React Frontend
+   cd task-list-app
+   npm install axios
 
-1. **In Another Terminal Window**: Navigate to your React app directory and start the development server:
+3. **In Another Terminal Window**: Navigate to your React app directory and start the development server:
 
    ```bash
    cd task-list-app

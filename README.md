@@ -109,6 +109,9 @@ Setting up and Running the Project
    conda activate task
    cd task-list-app
    npm start
+
+![plot](./6.png)
+![plot](./7.png)
    
 API Endpoints
 -------------

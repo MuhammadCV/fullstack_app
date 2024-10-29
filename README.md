@@ -112,7 +112,19 @@ Setting up and Running the Project
 
 ![plot](./6.png)
 ![plot](./7.png)
-   
+
+### Test the API Endpoints using Postman
+1. **Open Postman**: If you don't have Postman installed, you can download it from Postman's official website.
+
+2. **Test GET Request for Tasks**: Open Postman and create a new GET request. Enter the URL for your Django API endpoint, for example:
+   ```bash
+   http://localhost:8000/api/tasks/
+
+3. Click Send. You should receive a response with a list of tasks in JSON format.
+
+4. **Test Other Endpoints**: You can test other endpoints (like creating, updating, or deleting tasks), as well (using POST, PUT, DELETE methods as appropriate).
+
+
 API Endpoints
 -------------
 
